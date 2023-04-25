@@ -44,6 +44,10 @@ public class Unit1ExerciseSolutionJava7 {
             }
         });
 
+        System.out.println("*******");
+        Conditional condLambdaExpr = (p) -> p.getLastName().startsWith("A");
+//        printConditionally(people, (p) -> p.getLastName().startsWith("A"));  // both are correct
+        printConditionally(people, condLambdaExpr);
     }
 
     private static void printConditionally(List<Person> people, Conditional condition) {
